@@ -1,0 +1,376 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// == Fonts ==
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i');
+
+// == Colors ==
+$red: #FD4B3B;
+$blue: #1F76E3;
+$grey: #82919A;
+$dark-grey: #36424C;
+$light-grey: #F2F4F5;
+$blue-grey: #38667B;
+$strong-blue: #252D33;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px 22px;
+  color: $dark-grey;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 3fr 2fr;
+  li {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      font-size: .85em;
+      font-weight: 100;
+      margin-left: 15px;
+      color: $grey;
+    }
+  }
+  #left-items {
+    #logo {
+      float: left;
+      img {
+        width: 40px;
+      }
+    }
+    #text-logo {
+      float: left;
+      font-size: 1.7em;
+      font-weight: 100;
+      line-height: 45px;
+      margin: 0 0 0 10px;
+      padding: 0;
+    }
+  }
+  #middle-items {
+    text-align: center;
+    a {
+      float: left;
+    }
+  }
+  #right-items {
+    a {
+      float: right;
+    }
+    .cta-button {
+      background-color: $blue;
+      padding: 10px 30px;
+      font-weight: 400;
+      color: #fff;
+      border-radius: 30px;
+      position: relative;
+      bottom: 10px;
+    }
+  }
+}
+
+#hero {
+  display: grid;
+  grid-template-rows: auto 60px 20px;
+  grid-template-columns: 1fr;
+  #hero-text {
+    text-align: center;
+    padding: 150px 20px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    background-color: $red;
+    h1 {
+      margin-bottom: 60px;
+      font-size: 2.75em;
+    }
+    h2 {
+      margin: 50px auto 25px auto;
+    }
+    a {
+      padding: 10px 30px;
+      background-color: #fff;
+      color: $dark-grey;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      margin-top: 30px;
+    }
+  }
+  #demo-image-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: auto 20px;
+  }
+  .demo-image {
+    margin: -70px 5px auto 5px;
+    img {
+      width: 100%;
+      -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.6);
+      -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.6);
+      box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.6);
+    }
+    p {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: .85em;
+      font-weight: 300;
+      color: $grey;
+      text-align: center;
+    }
+  }
+  h3 {
+    text-align: center;
+    margin: 50px auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .8em;
+    color: grey;
+    font-weight: 300;
+  }
+}
+
+.presentation {
+  margin: 50px auto;
+  margin-bottom: -50px;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  font-family: 'Ubuntu', sans-serif;
+  h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.3em;
+    color: $blue-grey;
+    margin-bottom: 80px;
+  }
+  .presentation-content {
+    display: grid;
+    padding: 200px 10px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    -webkit-box-shadow: 0px -2px 6px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px -2px 6px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px -2px 6px 0px rgba(0,0,0,0.4);
+    img {
+      width: 350px;
+      margin-left: 50px;
+    }
+    .presentation-text {
+      width: 70%;
+      margin: auto 80px;
+      h3 {
+        font-weight: 700;
+        font-size: 2em;
+        color: $red;
+        margin-bottom: 50px;
+      }
+      p {
+        color: $grey;
+        font-size: 1em;
+        font-weight: 400;
+        margin-bottom: 60px;
+      }
+      a {
+        background-color: $red;
+        padding: 10px 30px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+#features {
+  display: grid;
+  margin: 100px auto;
+  padding: 0 130px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  font-family: 'Ubuntu', sans-serif;
+  h3 {
+    text-align: center;
+    color: $dark-grey;
+    font-size: 2em;
+    margin-bottom: 70px;
+  }
+  #features-items {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    img {
+      width: 100px;
+    }
+    .features-content {
+      text-align: center;
+      padding: 20px;
+      h4 {
+        color: $dark-grey;
+        font-size: 1.3em;
+        margin: 20px auto 30px auto;
+      }
+      p {
+        font-weight: 400;
+        color: $grey;
+        font-size: .9em;
+        margin: 0 auto 20px auto;
+      }
+    }
+  }
+}
+
+#app {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 30px 180px 0px;
+  h3 {
+    text-align: center;
+    font-size: 2.4em;
+    color: $dark-grey;
+    font-weight: 700;
+    margin-bottom: 150px;
+  }
+  #app-content {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 1fr;
+    #app-image {
+      img {
+        width: 450px;
+      }
+    }
+    #app-text {
+      p {
+        font-weight: 300;
+        color: $grey;
+        font-size: 1em;
+        margin-bottom: 50px;
+        width: 70%;
+      }
+      img {
+        width: 150px;
+      }
+      #app-title {
+        margin-bottom: 30px;
+        h4 {
+          font-weight: 300;
+          font-size: 2em;
+          margin-left: 80px;
+          color: $grey;
+          line-height: 60px;
+        }
+        img {
+          width: 60px;
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+#portfolio {
+  background-color: $light-grey;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  padding: 80px 150px;
+  margin-top: -5px;
+  font-family: 'Ubuntu', sans-serif;
+  #portfolio-links {
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: #fff;
+      background-color: $blue-grey;
+      padding: 10px 25px;
+      font-weight: 500;
+      border-radius: 50px;
+      margin: auto 10px;
+      font-size: .8em;
+    }
+  }
+  h3 {
+    text-align: center;
+    font-size: 2.2em;
+    color: $dark-grey;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  #portfolio-grid {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 40px;
+    img {
+      width: 98%;
+    }
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+  #make-design {
+    background-color: $strong-blue;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.3em;
+  }
+  #footer-content {
+    padding: 20px 250px 20px 60px;
+    background-color: #36424C;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    #left-content {
+      img {
+        margin: auto 5px;
+      }
+      #footer-logo {
+        img {
+          float: left;
+          width: 35px;
+        }
+        h1 {
+          font-weight: 300;
+          font-size: 1.5em;
+          line-height: 35px;
+          margin-left: 45px;
+        }
+      }
+    }
+    li {
+      list-style-type: none;
+      font-size: .75em;
+      font-weight: 300;
+      line-height: 2;
+      color: #82919A;
+      }
+      .category-name {
+        font-weight: 500;
+        line-height: 3;
+        color: #fff;
+    }
+  }
+  #legal {
+    padding: 0 60px;
+    background-color: #36424C;
+    p {
+      font-weight: 300;
+      font-size: .75em;
+      color: #82919A;
+      padding: 20px 0;
+      border-top: 1px solid #82919A;
+    }
+  }
+}
